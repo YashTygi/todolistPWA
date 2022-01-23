@@ -1,4 +1,3 @@
-console.log("This is Todo List app")
 showList();
 // Add Event listener
 let button = document.getElementById("btn");
@@ -9,7 +8,6 @@ button.addEventListener('click', function(e) {
     listArr.push(text.value);
     localStorage.setItem("list",JSON.stringify(listArr));
     text.value = "";
-    console.log(listArr);
     showList();
 })
 function showList(){
@@ -42,16 +40,3 @@ function deleteList(index) {
     showList();
 }
 
-// search = document.getElementById("search");
-// search.addEventListener('input', () => {
-//     let input = search.value.toLowerCase();
-//     let card = document.getElementsByClassName("listcard");
-//     Array.from(card).forEach((element) => {
-//         let cardText = element.getElementsByTagName("h5")[0];
-//         if (cardText.includes(input)) {
-//             element.style.display = "block";
-//         } else {
-//             element.style.display = "none";
-//         }
-//     })
-// })
